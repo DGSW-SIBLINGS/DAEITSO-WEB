@@ -31,15 +31,16 @@ font-size:0.8rem;
 color:#3D8AF5;
 font-weight: 500;
 margin:5px;
-margin-top:20px;
+margin-top:10px;
 `
 function Component(props){
     return(
-        <>{
-            console.log(props.post.imgUrls[0].imgUrl)
-        }
+        <>
         <ComponentWrap>
-            <img alt = "none" src={props.post.imgUrls[0].imgUrl} style={{width:180,height:180}}></img>
+            {
+                console.log(props.post)
+            }
+            <img alt = "none" src={props.post.imgUrls ? props.post.imgUrls[0]:""} style={{width:180,height:180}}></img>
             <ComponentTitle>{props.post.title}</ComponentTitle>
             <ComponentContent>{props.post.price}원</ComponentContent>
             <ComponentTag>#{props.post.category}</ComponentTag>

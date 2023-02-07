@@ -15,6 +15,9 @@ export default function Header() {
   const onClickmain = () => {
     navigate("/main");
   };
+  const onClickMypage = () => {
+    navigate("/mypage");
+  };
   return (
     <H.Headerbox>
       <H.Headersmallbox>
@@ -26,10 +29,11 @@ export default function Header() {
           <img className="Searchbtn" alt="" src={Searchbtn} />
         </H.Search>
         <H.Sell onClick={onClickupload}>
-          <img className="Sellicon" alt="" src={Sellicon} />
+        <img className="Sellicon" alt="" src={Sellicon} />
           판매하기
         </H.Sell>
-        <H.Mypage>
+
+        <H.Mypage onClick={onClickMypage}>
           <img className="Mypageicon" alt="마이페이지" src={Mypageicon} />
           마이페이지
         </H.Mypage>

@@ -15,20 +15,23 @@ export const Icon = styled.div`
   cursor: pointer;
   .LogoIcon {
     width: 90px;
-    margin-right: 80px;
+    margin-right: 230px;
   }
 `;
 export const Search = styled.div`
   display: flex;
-  border: 2.5px solid #2e35e4;
+  background-color: #F4F4F4;
   width: 310px;
   font-family: Pretendard;
+  margin-right:150px;
   cursor: pointer;
   input {
     width: 250px;
     height: 35px;
     border: 0;
     margin-left: 12px;
+    background-color: #F4F4F4;
+
   }
   input:focus {
     outline: none;
@@ -40,12 +43,12 @@ export const Search = styled.div`
 export const Sell = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 200px;
+  margin-left: 100px;
   font-family: Pretendard;
   cursor: pointer;
   .Sellicon {
     width: 30px;
-    margin-right: 6px;
+    margin-right: 10px;
   }
 `;
 export const Mypage = styled.div`
@@ -56,6 +59,6 @@ export const Mypage = styled.div`
   cursor: pointer;
   .Mypageicon {
     width: 20px;
-    margin-right: 6px;
+    margin-right: 10px;
   }
 `;
