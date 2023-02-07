@@ -1,35 +1,27 @@
 import React from "react";
-import {
-  StartLoginBox,
-  StartBox,
-  StartInBox,
-  StartLeftBox,
-  StartRightBox,
-  StartRight,
-  StartImgBox,
-  StartBack,
-} from "./Start.style";
+import * as S from "./Start.style";
 import Loginbackgounod from "../../assets/img/loginbackground.svg";
 import loginIcon from "../../assets/img/loginicon.svg";
 import logo from "../../assets/img/logo.svg";
 import logowith from "../../assets/img/logotag.svg";
+import AuthBt from "../Button/AuthBt/AuthBt";
 
 export default function StartLogin() {
   return (
-    <StartLoginBox>
-      <StartBox>
-        <StartBack>
+    <S.StartLoginBox>
+      <S.StartBox>
+        <S.StartBack>
           <img className="Login-background" alt="" src={Loginbackgounod} />
-        </StartBack>
-        <StartInBox>
-          <StartLeftBox>
-            <StartImgBox>
+        </S.StartBack>
+        <S.StartInBox>
+          <S.StartLeftBox>
+            <S.StartImgBox>
               <img className="Login-left-logo" alt="" src={logowith} />
               <img className="Login-img" alt="" src={loginIcon} />
-            </StartImgBox>
-          </StartLeftBox>
-          <StartRightBox>
-            <StartRight>
+            </S.StartImgBox>
+          </S.StartLeftBox>
+          <S.StartRightBox>
+            <S.StartRight>
               <img className="Login-logo" alt="" src={logo} />
               <b>나눔으로 이어주는 연결고리</b>
               <text>
@@ -41,11 +33,11 @@ export default function StartLogin() {
                 <br />
                 선배들의 물건, 능력을 물려받고, 더 멋있는 개발자가 되어보세요.
               </text>
-              <button>DAuth 로그인</button>
-            </StartRight>
-          </StartRightBox>
-        </StartInBox>
-      </StartBox>
-    </StartLoginBox>
+              <AuthBt />
+            </S.StartRight>
+          </S.StartRightBox>
+        </S.StartInBox>
+      </S.StartBox>
+    </S.StartLoginBox>
   );
 }
