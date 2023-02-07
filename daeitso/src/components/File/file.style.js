@@ -37,10 +37,12 @@ export const FileImgBt = styled.div`
     font-size: 11px;
     font-family: Pretendard;
     border: 0;
+    background-color: #3d8af5;
+    color: white;
   }
   .Camera-icon {
     font-size: 25px;
-    color: #636363;
+    color: white;
     font-family: Pretendard;
   }
 `;
