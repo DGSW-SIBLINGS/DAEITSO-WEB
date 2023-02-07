@@ -31,7 +31,7 @@ font-size:0.8rem;
 color:#3D8AF5;
 font-weight: 500;
 margin:5px;
-margin-top:20px;
+margin-top:10px;
 `
 function Component(props){
     return(

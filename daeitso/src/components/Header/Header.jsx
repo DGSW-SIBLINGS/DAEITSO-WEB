@@ -27,7 +27,6 @@ export default function Header() {
         </H.Search>
           <img className="Sellicon" alt="" src={Sellicon} />
           판매하기
-        </H.Sell>
         <H.Mypage>
           <img className="Mypageicon" alt="마이페이지" src={Mypageicon} />
           마이페이지

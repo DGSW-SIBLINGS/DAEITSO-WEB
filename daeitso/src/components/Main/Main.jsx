@@ -110,7 +110,7 @@ place:"PLAYGROUND"
     }
     
     </M.ComponentWrap>
-    <M.Subtitle>오늘 등록된 상품</M.Subtitle>
+    <M.Subtitle>도서 카테고리 상품</M.Subtitle>
     <M.ComponentWrap>
     {
         data.map((a,i)=>{

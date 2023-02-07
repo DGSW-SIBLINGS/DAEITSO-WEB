@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import Main from "./page/Mainpage/Mainpage";
 import Uploadpage from "./page/Uploadpage/Uploadpage";
 import AuthLoadingPage from "./page/AuthLoadingpage";
-
+import Mypage from "./page/Mypage/Mypage";
 import Postpage from "./page/Postpage/Postpage";
 //import AuthLoadingPage from "./page/AuthLoadingpage";
 
@@ -19,6 +19,7 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/upload" element={<Uploadpage />} />
         <Route path="/post" element={<Postpage />} />
+        <Route path="/mypage" element={<Mypage />} />
       </Routes>
     </BrowserRouter>
   );
