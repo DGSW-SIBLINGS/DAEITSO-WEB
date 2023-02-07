@@ -1,12 +1,4 @@
 import React from "react";
-// import {
-//   Headerbox,
-//   Icon,
-//   Search,
-//   Sell,
-//   Mypage,
-//   Headersmallbox,
-// } from "./Header.style";
 import Logoicon from "../../assets/img/logowithicon.svg";
 import Searchbtn from "../../assets/img/Searchbutton.svg";
 import Sellicon from "../../assets/img/Sell_icon.svg";
