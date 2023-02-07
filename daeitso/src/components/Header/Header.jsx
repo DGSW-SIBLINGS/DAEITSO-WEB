@@ -9,6 +9,7 @@ import {
 } from "./Header.style";
 
 export default function Header() {
+
   return (
     <Headerbox>
       <Icon>
@@ -27,5 +28,9 @@ export default function Header() {
         <p>test</p>dfdfdf
       </Mypage>
     </Headerbox>
+
+}
+
   );
 }
+
