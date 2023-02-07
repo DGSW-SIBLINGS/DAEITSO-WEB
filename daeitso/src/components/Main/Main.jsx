@@ -108,7 +108,18 @@ place:"PLAYGROUND"
             return <Component post={a} key={i}></Component>
         })
     }
+    
     </M.ComponentWrap>
+    <M.Subtitle>오늘 등록된 상품</M.Subtitle>
+    <M.ComponentWrap>
+    {
+        data.map((a,i)=>{
+            return <Component post={a} key={i}></Component>
+        })
+    }
+    
+    </M.ComponentWrap>
+    
     </M.MainWrap>
     </>
 

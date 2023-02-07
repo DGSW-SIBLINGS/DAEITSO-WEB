@@ -58,7 +58,12 @@ function Post(){
                     <P.Memo>상품문의</P.Memo>
                     </P.Row>
                 </P.line>
-                <P.MemoContent2></P.MemoContent2>
+                <P.MemoContent2>
+                    <P.Message_White width={'300px'}>안녕하세요 구매가능한가요?</P.Message_White>
+                    <P.Message_Blue width={'250px'}>넵 구매 가능합니다!</P.Message_Blue>
+                    <P.Message_White width={'350px'}>오오 그럼 운동장에서 3시에 만날까요?</P.Message_White>
+                    <P.Message_Blue width={'100px'}>좋습니다!</P.Message_Blue>
+                </P.MemoContent2>
         </P.PostWrap>
 
         </>
