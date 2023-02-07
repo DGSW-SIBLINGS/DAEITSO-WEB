@@ -43,7 +43,7 @@ export const Search = styled.div`
 export const Sell = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 200px;
+  margin-left: 100px;
   font-family: Pretendard;
   cursor: pointer;
   .Sellicon {
