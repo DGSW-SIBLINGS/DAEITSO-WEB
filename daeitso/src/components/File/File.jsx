@@ -10,7 +10,7 @@ export default function File() {
           <h2>상품등록</h2>
         </F.FileH1>
         <F.FileInputBox>
-          <h3></h3>
+          <h3>상품이미지</h3>
           <li></li>
           <li></li>
           <input></input>
