@@ -7,6 +7,9 @@ import Main from "./page/Mainpage/Mainpage";
 import Uploadpage from "./page/Uploadpage/Uploadpage";
 import AuthLoadingPage from "./page/AuthLoadingpage";
 
+import Postpage from "./page/Postpage/Postpage";
+import AuthLoadingPage from "./page/AuthLoadingpage";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +18,7 @@ function App() {
         <Route path="/callback" element={<AuthLoadingPage />} />
         <Route path="/main" element={<Main />} />
         <Route path="/upload" element={<Uploadpage />} />
+        <Route path="/post" element={<Postpage />} />
       </Routes>
     </BrowserRouter>
   );
