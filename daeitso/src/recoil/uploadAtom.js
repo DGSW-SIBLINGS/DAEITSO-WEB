@@ -12,7 +12,7 @@ export const postUploadnameAtom = atom({
 
 export const postUploadpriceAtom = atom({
   key: "postUploadpriceAtom",
-  default: "",
+  default: 0,
 });
 
 export const postUploadfreeAtom = atom({
