@@ -1,7 +1,9 @@
+import "./App.css";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Startpage from "./page/Startpage/Startpage";
 import Header from "./components/Header/Header";
-import "./App.css";
+import Main from "./page/Mainpage/Mainpage";
 import Uploadpage from "./page/Uploadpage/Uploadpage";
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Startpage />} />
+        <Route path="/main2" element={<Main />} />
         <Route path="/upload" element={<Uploadpage />} />
       </Routes>
     </BrowserRouter>
