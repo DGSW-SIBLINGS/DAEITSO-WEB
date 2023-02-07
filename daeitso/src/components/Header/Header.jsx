@@ -25,6 +25,7 @@ export default function Header() {
           <input className="Search-input" />
           <img className="Searchbtn" alt="" src={Searchbtn} />
         </H.Search>
+        <H.Sell onClick={onClickupload}>
           <img className="Sellicon" alt="" src={Sellicon} />
           판매하기
         </H.Sell>
