@@ -1,9 +1,14 @@
 import axios from "axios";
+// import {
+//   ACCESS_KEY,
+//   REFRESH_KEY,
+//   REQUEST_KEY,
+// } from "../../constants/auth/auth.constant";
 import {
   ACCESS_KEY,
   REFRESH_KEY,
   REQUEST_KEY,
-} from "../../constants/auth/auth.constant";
+} from "../../constants/auth/auth.constants";
 import CONFIG from "../../config.json";
 
 export const customAxios = axios.create({
