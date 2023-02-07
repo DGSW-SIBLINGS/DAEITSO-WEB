@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const MainWrap = styled.div`
-height:30vh;
+height:200px;
 box-sizing: border-box;
-
+background-color: aliceblue;
 display: flex;
-justify-content: center;
-//align-items: center;
+align-items: center;
+flex-direction: column;
+
 `
 export const BannerImg = styled.div`
   display: flex;
@@ -19,6 +20,21 @@ export const BannerImg = styled.div`
 
 export const Minibanner = styled.img`
     width: 1155px;
-    height: 300px;
+    height:200px;
     
+`
+export const Subtitle = styled.div`
+    color:black;
+    font-weight: 500;
+    font-size:1.4em;
+    font-family: Pretendard;
+    width:1155px;
+
+`
+export const ComponentWrap = styled.div`
+display: flex;
+flex-direction: row;
+width:1155px;
+height:300px;
+margin-right: 10px;
 `

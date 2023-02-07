@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Startpage />} />
-        <Route path="/main2" element={<Main />} />
+        <Route path="/main" element={<Main />} />
         <Route path="/upload" element={<Uploadpage />} />
       </Routes>
     </BrowserRouter>
