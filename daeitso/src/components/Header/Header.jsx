@@ -14,6 +14,8 @@ import Mypageicon from "../../assets/img/Mypage_icon.svg";
 
 export default function Header() {
 
+
+
     return (
         <Headerbox>
             <Headersmallbox>
@@ -35,6 +37,5 @@ export default function Header() {
             </Headersmallbox>
         </Headerbox>
     );
-  
-}
 
+}
