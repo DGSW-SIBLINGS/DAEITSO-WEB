@@ -28,9 +28,6 @@ export default function Header() {
         <p>test</p>dfdfdf
       </Mypage>
     </Headerbox>
-
-}
-
-  );
+  )
 }
 
