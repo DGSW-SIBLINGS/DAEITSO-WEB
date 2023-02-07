@@ -12,6 +12,7 @@ export const Headersmallbox = styled.div`
 export const Icon = styled.div`
   display: flex;
   font-family: Pretendard;
+  cursor: pointer;
   .LogoIcon {
     width: 90px;
     margin-right: 80px;
@@ -22,6 +23,7 @@ export const Search = styled.div`
   border: 2.5px solid #2e35e4;
   width: 310px;
   font-family: Pretendard;
+  cursor: pointer;
   input {
     width: 250px;
     height: 35px;
@@ -40,6 +42,7 @@ export const Sell = styled.div`
   align-items: center;
   margin-left: 200px;
   font-family: Pretendard;
+  cursor: pointer;
   .Sellicon {
     width: 30px;
     margin-right: 6px;
@@ -50,6 +53,7 @@ export const Mypage = styled.div`
   align-items: center;
   margin-left: 25px;
   font-family: Pretendard;
+  cursor: pointer;
   .Mypageicon {
     width: 20px;
     margin-right: 6px;

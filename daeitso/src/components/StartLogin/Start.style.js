@@ -81,7 +81,7 @@ export const StartRight = styled.div`
     font-weight: 500;
   }
 
-  text {
+  p {
     color: #949494;
     font-size: 14px;
     margin-left: 100px;

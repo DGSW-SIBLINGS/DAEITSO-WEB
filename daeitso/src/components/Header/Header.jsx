@@ -4,19 +4,27 @@ import Searchbtn from "../../assets/img/Searchbutton.svg";
 import Sellicon from "../../assets/img/Sell_icon.svg";
 import Mypageicon from "../../assets/img/Mypage_icon.svg";
 import * as H from "./Header.style";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
+  const onClickupload = () => {
+    navigate("/upload");
+  };
+
+  const onClickmain = () => {
+    navigate("/main");
+  };
   return (
     <H.Headerbox>
       <H.Headersmallbox>
-        <H.Icon>
+        <H.Icon onClick={onClickmain}>
           <img className="LogoIcon" alt="" src={Logoicon} />
         </H.Icon>
         <H.Search>
           <input className="Search-input" />
           <img className="Searchbtn" alt="" src={Searchbtn} />
         </H.Search>
-        <H.Sell>
           <img className="Sellicon" alt="" src={Sellicon} />
           판매하기
         </H.Sell>

@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const FileBox = styled.div``;
 export const FileList = styled.div`
-  margin-left: 20%;
+  margin-left: 23%;
   margin-top: 25px;
   font-size: 12px;
 `;
 export const FileH1 = styled.div`
   h2 {
-    margin-left: -24px;
+    margin-left: -15px;
     font-family: Pretendard;
   }
 `;
@@ -26,7 +26,6 @@ export const FileLi = styled.div`
 `;
 export const FileImgBt = styled.div`
   display: flex;
-
   button {
     display: flex;
     flex-direction: column;

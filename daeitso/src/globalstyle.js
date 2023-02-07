@@ -1,14 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
+//${reset}
 const GlobalStyle = createGlobalStyle`
-    ${reset}
     user-select: none;
     @font-face {
 	font-family: 'Pretendard';
 	font-weight: 900;
 	font-display: swap;
 	src: local('Pretendard Black'), url('./woff2/Pretendard-Black.woff2') format('woff2'), url('./woff/Pretendard-Black.woff') format('woff');
+	
 }
 
 @font-face {
