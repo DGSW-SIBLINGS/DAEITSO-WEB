@@ -31,9 +31,22 @@ export const StartLeftBox = styled.div`
 `;
 export const StartImgBox = styled.div`
   display: flex;
+  flex-direction: column;
   width: 400px;
   height: 600px;
   background-color: #ecf4fe;
+  .Login-img {
+    width: 500px;
+    margin-left: -50px;
+    /* margin-top: 40px; */
+  }
+
+  .Login-left-logo {
+    /* z-index: 20; */
+    width: 75px;
+    margin-left: 30px;
+    margin-top: 40px;
+  }
 `;
 
 export const StartRightBox = styled.div`
@@ -43,7 +56,43 @@ export const StartRightBox = styled.div`
 `;
 export const StartRight = styled.div`
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+  /* align-items: center; */
   width: 700px;
   height: 600px;
   background-color: white;
+  /* margin-left: -100px; */
+  .Login-logo {
+    /* display: flex;
+    justify-content: flex-start; */
+    width: 80px;
+    margin-left: 101px;
+    margin-bottom: 5px;
+  }
+
+  b {
+    font-size: 22px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    /* color: #; */
+  }
+
+  text {
+    color: #949494;
+    font-size: 12px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+  }
+
+  button {
+    width: 200px;
+    height: 38px;
+    margin-left: 100px;
+    color: white;
+    background-color: #3d8af5;
+    border: 0;
+    border-radius: 50px;
+  }
 `;
