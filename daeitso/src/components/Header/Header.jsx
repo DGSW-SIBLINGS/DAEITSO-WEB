@@ -5,19 +5,19 @@ export default function Header() {
     return (
         <Headerbox>
             <Icon>
-                <h1>test</h1>
+                <img />
             </Icon>
             <Search>
-                <p>test</p>
+                <input />
             </Search>
             <SearchButton>
-                <p>test</p>
+                <img />
             </SearchButton>
-            <Sell>
-                <p>test</p>
+            <Sell>s
+                <img />
             </Sell>
             <Mypage>
-                <p>test</p>
+                <img />
             </Mypage>
         </Headerbox>
     );
