@@ -1,70 +1,124 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { LOCATION } from "../../constants/locationlist/LOCATION";
-import { postUploadlocationAtom } from "../../recoil/uploadAtom";
-import UploadBt from "../Button/UploadupBt/UploadupBt";
+import {
+  postUploadfreeAtom,
+  postUploadinfoAtom,
+  postUploadlocationAtom,
+  postUploadnameAtom,
+  postUploadpriceAtom,
+  postUploadtagAtom,
+} from "../../recoil/uploadAtom";
 import * as U from "./upload.style";
 import { useState } from "react";
+import { AiFillCaretDown } from "react-icons/ai";
+import { TAGLIST } from "../../constants/taglist/TAGLIST";
 
 export default function Upload() {
-  const [tag, setTag] = useRecoilState(postUploadlocationAtom);
+  const [locatag, setLocatag] = useRecoilState(postUploadlocationAtom);
+  const [tag, setTag] = useRecoilState(postUploadtagAtom);
+  const [name, setName] = useRecoilState(postUploadnameAtom);
+  const [prices, setPrice] = useRecoilState(postUploadpriceAtom);
+  const [free, setFree] = useRecoilState(postUploadfreeAtom);
+  const [info, setInfo] = useRecoilState(postUploadinfoAtom);
+
   const [showPopup, setShowPopup] = useState(false);
+  const [tagPopup, setTagPopup] = useState(false);
 
   const togglePopup = () => {
     setShowPopup(true);
   };
 
-  const togglePopupinner = () => {
-    setShowPopup(false);
+  const tagopen = () => {
+    setTagPopup(true);
   };
+
+  const handleName = (e) => {
+    setName(e.target.value);
+    console.log(name);
+  };
+
+  const onIncrease = () => {
+    setPrice((prevCount) => prevCount + 1000);
+    console.log(prices);
+  };
+
+  const onPrice = () => {
+    setFree(0);
+    console.log(free);
+  };
+
+  const handleInfo = (e) => {
+    setInfo(e.target.value);
+    console.log(info);
+  };
+
+  useEffect(() => {
+    console.log(tag);
+  }, [tag]);
+
+  useEffect(() => {
+    console.log(locatag);
+  }, [locatag]);
+  // const
   return (
     <U.UploadBox>
       <U.UploadList>
         <U.UploadTop>
           <U.UploadName>
             <b>상품 이름</b>
-            <input></input>
+            <input value={name} onChange={(e) => handleName(e)}></input>
           </U.UploadName>
-          <U.UploadPrice>
+          <U.UploadPriceBox>
             <b>상품 가격</b>
-            <input></input>
-          </U.UploadPrice>
+            <U.UploadPrice>
+              <div className="priceBox">
+                {prices}
+                {free}원<button onClick={onIncrease}>+</button>
+              </div>
+            </U.UploadPrice>
+          </U.UploadPriceBox>
           <U.UploadPriceBt>
-            <button>나눔</button> 1
+            <button onClick={onPrice}>나눔</button>
           </U.UploadPriceBt>
         </U.UploadTop>
         <U.Uploadmiddle>
           <U.UploadInfo>
             <b>상품 설명</b>
-            <textarea></textarea>
+            <textarea value={info} onChange={(e) => handleInfo(e)}></textarea>
           </U.UploadInfo>
         </U.Uploadmiddle>
         <U.UploadBottom>
           <U.UploadTag>
             <b>거래 위치</b>
             <button className="open" onClick={togglePopup} value="false">
-              +
+              <AiFillCaretDown />
             </button>
 
             {showPopup
               ? LOCATION.map((item) => (
-                  <button onClick={() => setTag(item.name)}>{item.name}</button>
+                  <button
+                    className="lacatagbt"
+                    onClick={() => setLocatag(item.name)}
+                  >
+                    {item.name}
+                  </button>
                 ))
               : null}
-            <button className="close" onClick={togglePopupinner}>
-              x
-            </button>
           </U.UploadTag>
           <U.UploadLo>
             <b>상품 태그</b>
-            <select>
-              <option>도서</option>
-              <option>옷</option>
-              <option>전자기기</option>
-              <option>음식</option>
-              <option>재능기부</option>
-              <option>기타중고물품</option>
-            </select>
+            <button className="opentag" onClick={tagopen} value="false">
+              <AiFillCaretDown />
+            </button>
+
+            {tagPopup
+              ? TAGLIST.map((item) => (
+                  <button className="t" onClick={() => setTag(item.name)}>
+                    {item.name}
+                  </button>
+                ))
+              : null}
           </U.UploadLo>
         </U.UploadBottom>
       </U.UploadList>

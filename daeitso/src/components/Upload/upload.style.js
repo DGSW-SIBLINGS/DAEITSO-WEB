@@ -30,7 +30,7 @@ export const UploadName = styled.div`
     text-indent: 10px;
   }
 `;
-export const UploadPrice = styled.div`
+export const UploadPriceBox = styled.div`
   display: flex;
   flex-direction: column;
   b {
@@ -42,6 +42,27 @@ export const UploadPrice = styled.div`
     background-color: #f2f2f2;
     border: 0;
     text-indent: 10px;
+  }
+`;
+
+export const UploadPrice = styled.div`
+  display: flex;
+  .priceBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+    height: 44px;
+    background-color: #f2f2f2;
+  }
+  button {
+    font-size: 20px;
+    border: 0;
+    margin-right: -10px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 100px;
+    /* margin-right: 10px; */
   }
 `;
 
@@ -88,6 +109,7 @@ export const UploadBottom = styled.div`
 export const UploadTag = styled.div`
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
   b {
     font-size: 14px;
   }
@@ -99,7 +121,25 @@ export const UploadTag = styled.div`
     margin-right: 20px;
   } */
   .open {
-    width: 393px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* margin-left: 50px; */
+    width: 390px;
+    height: 44px;
+    border: 0;
+    /* margin-right: 15px; */
+  }
+
+  .lacatagbt {
+    border: 0;
+    height: 22px;
+    background-color: #f8f8f8;
+    /* border-left: 0.5px solid black;/ */
+    /* border-bottom-left-radius: 10px; */
+  }
+  .lacatagbt:hover {
+    background-color: #3d8af5;
   }
 `;
 export const UploadLo = styled.div`
@@ -113,6 +153,26 @@ export const UploadLo = styled.div`
     height: 44px;
     background-color: #f2f2f2;
     border: 0;
+  }
+  .opentag {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* margin-left: 50px; */
+    width: 393px;
+    height: 44px;
+    border: 0;
+  }
+
+  .t {
+    border: 0;
+    height: 22px;
+    background-color: #f8f8f8;
+    /* border-left: 0.5px solid black;/ */
+    /* border-bottom-left-radius: 10px; */
+  }
+  .t:hover {
+    background-color: #3d8af5;
   }
 `;
 
