@@ -10,25 +10,25 @@ import {
 
 export default function Header() {
 
-    return (
-        <Headerbox>
-            <Icon>
-                <img />
-            </Icon>
-            <Search>
-                <input />
-            </Search>
-            <SearchButton>
-                <img />
-            </SearchButton>
-            <Sell>n
-                <img />
-            </Sell>
-            <Mypage>
-                <img />
-            </Mypage>
-        </Headerbox>
-    );
+  return (
+    <Headerbox>
+      <Icon>
+        <h1>test</h1>
+      </Icon>
+      <Search>
+        <p>test</p>
+      </Search>
+      <SearchButton>
+        <p>test</p>
+      </SearchButton>
+      <Sell>
+        <p>test</p>
+      </Sell>
+      <Mypage>
+        <p>test</p>dfdfdf
+      </Mypage>
+    </Headerbox>
+
 }
 
   );
