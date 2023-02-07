@@ -33,7 +33,7 @@ export default function StartLogin() {
               <img className="Login-logo" alt="" src={logo} />
               <b>나눔으로 이어주는 연결고리</b>
               <text>
-                대구소프트웨어마이스터고 신입생 여러분과 동급생 , 선배분들을
+                대구소프트웨어마이스터고 신입생 여러분과 동급생, 선배님들을
                 환영합니다.
                 <br />
                 저희 플랫폼은 신입생 여러분들이 좀 더 나은 학교생활을 할 수

@@ -19,7 +19,7 @@ function Main() {
         {
             title:"햄버거 팝니다",
             imgUrls:[
-               {imgUrl: "https://mentomen.s3.ap-northeast-2.amazonaws.com/17b24840-d150-4d26-aac7-67346db35ca5.jpg"}],
+               {imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKhqpzZUj7Gjc0AmulXvFbmbBj0fu6YxbqQ&usqp=CAU"}],
         category:"FOOD",
         content:"아 집가고 싶다",
         price:3600,
@@ -29,7 +29,7 @@ function Main() {
     {
         title:"햄버거 팝니다",
         imgUrls:[
-           {imgUrl: "https://mentomen.s3.ap-northeast-2.amazonaws.com/17b24840-d150-4d26-aac7-67346db35ca5.jpg"}],
+           {imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKhqpzZUj7Gjc0AmulXvFbmbBj0fu6YxbqQ&usqp=CAU"}],
     category:"FOOD",
     content:"아 집가고 싶다",
     price:3600,
@@ -39,7 +39,7 @@ function Main() {
 {
     title:"햄버거 팝니다",
     imgUrls:[
-       {imgUrl: "https://mentomen.s3.ap-northeast-2.amazonaws.com/17b24840-d150-4d26-aac7-67346db35ca5.jpg"}],
+       {imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKhqpzZUj7Gjc0AmulXvFbmbBj0fu6YxbqQ&usqp=CAU"}],
 category:"FOOD",
 content:"아 집가고 싶다",
 price:3600,
@@ -49,7 +49,7 @@ place:"PLAYGROUND"
 {
     title:"햄버거 팝니다",
     imgUrls:[
-       {imgUrl: "https://mentomen.s3.ap-northeast-2.amazonaws.com/17b24840-d150-4d26-aac7-67346db35ca5.jpg"}],
+       {imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKhqpzZUj7Gjc0AmulXvFbmbBj0fu6YxbqQ&usqp=CAU"}],
 category:"FOOD",
 content:"아 집가고 싶다",
 price:3600,
@@ -59,7 +59,16 @@ place:"PLAYGROUND"
 {
     title:"햄버거 팝니다",
     imgUrls:[
-       {imgUrl: "https://mentomen.s3.ap-northeast-2.amazonaws.com/17b24840-d150-4d26-aac7-67346db35ca5.jpg"}],
+       {imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKhqpzZUj7Gjc0AmulXvFbmbBj0fu6YxbqQ&usqp=CAU"}],
+category:"FOOD",
+content:"아 집가고 싶다",
+price:3600,
+freeShare:"SALE",
+place:"PLAYGROUND"
+},{
+    title:"햄버거 팝니다",
+    imgUrls:[
+       {imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKhqpzZUj7Gjc0AmulXvFbmbBj0fu6YxbqQ&usqp=CAU"}],
 category:"FOOD",
 content:"아 집가고 싶다",
 price:3600,
