@@ -8,7 +8,7 @@ import Uploadpage from "./page/Uploadpage/Uploadpage";
 import AuthLoadingPage from "./page/AuthLoadingpage";
 
 import Postpage from "./page/Postpage/Postpage";
-import AuthLoadingPage from "./page/AuthLoadingpage";
+//import AuthLoadingPage from "./page/AuthLoadingpage";
 
 function App() {
   return (

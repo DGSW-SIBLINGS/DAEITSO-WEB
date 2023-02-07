@@ -52,7 +52,7 @@ font-weight: 600;
 export const Tag = styled.div`
 width:70px;
 height:30px;
-background-color: #3D8AF5;
+background-color: #5E78FF;
 
 display: flex;
 align-items: center;
@@ -91,6 +91,7 @@ color:white;
 font-family:pretendard;
 font-weight:600;
 font-size:1.2rem;
+border-radius: 5px;
 background-color: ${props => props.color};
 
 margin:10px;
@@ -136,7 +137,34 @@ height:300px;
 `
 
 export const MemoContent2 = styled.div`
-border-bottom:1px solid black;
+
 width:1155px;
 height:500px;
+background-color: #F2F3FD;
+`
+
+export const Message_White = styled.div`
+background-color: white;
+border-radius: 5px;
+color:black;
+font-family: pretendard;
+font-weight: 500;
+
+width: ${props => props.width};
+padding:10px;
+margin:10px;
+
+`
+
+export const Message_Blue = styled.div`
+background-color: white;
+border-radius: 5px;
+color:#5E78FF;
+font-family: pretendard;
+font-weight: 500;
+
+width:${props => props.width};
+padding:10px;
+margin:10px;
+
 `
