@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Startpage />} />
         <Route path="/main" element={<Header />} />
         <Route path="/main2" element={<Main/>} />
+        <Route path="/upload" element={<Uploadpage />} />
       </Routes>
     </BrowserRouter>
   );
