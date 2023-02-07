@@ -1,8 +1,22 @@
 import React from "react";
+import { useRecoilState } from "recoil";
+import { LOCATION } from "../../constants/locationlist/LOCATION";
+import { postUploadlocationAtom } from "../../recoil/uploadAtom";
 import UploadBt from "../Button/UploadupBt/UploadupBt";
 import * as U from "./upload.style";
+import { useState } from "react";
 
 export default function Upload() {
+  const [tag, setTag] = useRecoilState(postUploadlocationAtom);
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(true);
+  };
+
+  const togglePopupinner = () => {
+    setShowPopup(false);
+  };
   return (
     <U.UploadBox>
       <U.UploadList>
@@ -16,7 +30,7 @@ export default function Upload() {
             <input></input>
           </U.UploadPrice>
           <U.UploadPriceBt>
-            <button>무료나눔</button>
+            <button>나눔</button> 1
           </U.UploadPriceBt>
         </U.UploadTop>
         <U.Uploadmiddle>
@@ -27,24 +41,29 @@ export default function Upload() {
         </U.Uploadmiddle>
         <U.UploadBottom>
           <U.UploadTag>
-            <b>상품 태그</b>
-            <select>
-              <option>운동장 - PLAYGROUND</option>
-              <option>강당 - AUDITORIUM</option>
-              <option>재덕정 - JAEDUCK</option>
-              <option>도서관 - LIBRARY</option>
-              <option>야외음악당 - OUTDOOR CONCERT HALL</option>
-            </select>
+            <b>거래 위치</b>
+            <button className="open" onClick={togglePopup} value="false">
+              +
+            </button>
+
+            {showPopup
+              ? LOCATION.map((item) => (
+                  <button onClick={() => setTag(item.name)}>{item.name}</button>
+                ))
+              : null}
+            <button className="close" onClick={togglePopupinner}>
+              x
+            </button>
           </U.UploadTag>
           <U.UploadLo>
-            <b>거래 위치</b>
+            <b>상품 태그</b>
             <select>
-              <option>도서 - BOOK</option>
-              <option>옷 - CLOTHES</option>
-              <option>전자기기 - ELECTRONICS</option>
-              <option>음식 - FOOD</option>
-              <option>재능기부 - TALENT</option>
-              <option>기타중고물품 - ETC</option>
+              <option>도서</option>
+              <option>옷</option>
+              <option>전자기기</option>
+              <option>음식</option>
+              <option>재능기부</option>
+              <option>기타중고물품</option>
             </select>
           </U.UploadLo>
         </U.UploadBottom>
