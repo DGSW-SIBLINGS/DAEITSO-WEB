@@ -1,10 +1,24 @@
 import styled from "styled-components";
 
 export const MainWrap = styled.div`
-width:100%;
-height:95vh;
-background-color: #f2f2f2;
-padding-left: 382px;
-padding-right: 382px;
+height:30vh;
 box-sizing: border-box;
+
+display: flex;
+justify-content: center;
+//align-items: center;
+`
+export const BannerImg = styled.div`
+  display: flex;
+  justify-content: center;
+  img {
+    width: 1155px;
+    height: 300px;
+  }
+`;
+
+export const Minibanner = styled.img`
+    width: 1155px;
+    height: 300px;
+    
 `

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Startpage from "./page/Startpage/Startpage";
 import Header from "./components/Header/Header";
 import Main from "./page/Mainpage/Mainpage";
+import Uploadpage from "./page/Uploadpage/Uploadpage";
 
 function App() {
   return (
