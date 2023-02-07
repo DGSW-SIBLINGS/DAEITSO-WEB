@@ -32,7 +32,7 @@ export default function Header() {
                 </Sell>
                 <Mypage>
                     <img className="Mypageicon" alt="마이페이지" src={Mypageicon} />
-                    마이페이지
+                    마이페이지sd
                 </Mypage>
             </Headersmallbox>
         </Headerbox>
