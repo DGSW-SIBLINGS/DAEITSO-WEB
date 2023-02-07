@@ -9,11 +9,13 @@ export const FileList = styled.div`
 export const FileH1 = styled.div`
   h2 {
     margin-left: -24px;
+    font-family: Pretendard;
   }
 `;
 export const FileInputBox = styled.div`
   h3 {
     margin-top: 20px;
+    font-family: Pretendard;
   }
 `;
 
@@ -33,6 +35,7 @@ export const FileImgBt = styled.div`
     width: 150px;
     height: 150px;
     font-size: 11px;
+    font-family: Pretendard;
     border: 0;
     background-color: #3d8af5;
     color: white;
@@ -40,5 +43,6 @@ export const FileImgBt = styled.div`
   .Camera-icon {
     font-size: 25px;
     color: white;
+    font-family: Pretendard;
   }
 `;
