@@ -24,7 +24,7 @@ export default function Header() {
         <p>test</p>
       </Sell>
       <Mypage>
-        <p>test</p>
+        <p>test</p>dfdfdf
       </Mypage>
     </Headerbox>
   );
