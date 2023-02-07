@@ -1,4 +1,3 @@
-
 import "./App.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -12,13 +11,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Startpage />} />
-        <Route path="/main" element={<Header />} />
-        <Route path="/main2" element={<Main/>} />
+        <Route path="/main2" element={<Main />} />
         <Route path="/upload" element={<Uploadpage />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default App
-
+export default App;
