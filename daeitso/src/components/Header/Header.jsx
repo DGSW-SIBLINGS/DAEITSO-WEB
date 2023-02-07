@@ -13,7 +13,7 @@ export default function Header() {
             <SearchButton>
                 <img />
             </SearchButton>
-            <Sell>s
+            <Sell>n
                 <img />
             </Sell>
             <Mypage>
