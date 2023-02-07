@@ -23,6 +23,7 @@ export const FileLi = styled.div`
   /* margin-top: 5px; */
   margin-bottom: 10px;
   color: #858585;
+  margin-top: 10px;
 `;
 export const FileImgBt = styled.div`
   display: flex;
@@ -38,10 +39,17 @@ export const FileImgBt = styled.div`
     border: 0;
     background-color: #3d8af5;
     color: white;
+    margin-top: 15px;
   }
   .Camera-icon {
     font-size: 25px;
     color: white;
     font-family: Pretendard;
+  }
+  .img {
+    width: 150px;
+    height: 150px;
+    margin-left: -150px;
+    margin-top: 15px;
   }
 `;

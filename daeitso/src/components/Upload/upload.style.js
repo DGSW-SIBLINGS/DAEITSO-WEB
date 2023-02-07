@@ -5,12 +5,15 @@ export const UploadList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
 `;
 export const UploadTop = styled.div`
   display: flex;
   margin-left: -35px;
   margin-bottom: 25px;
+  /* button {
+    width: 200px;
+  } */
 `;
 export const UploadName = styled.div`
   display: flex;
@@ -24,6 +27,7 @@ export const UploadName = styled.div`
     background-color: #f2f2f2;
     border: 0;
     margin-right: 20px;
+    text-indent: 10px;
   }
 `;
 export const UploadPrice = styled.div`
@@ -37,6 +41,7 @@ export const UploadPrice = styled.div`
     height: 44px;
     background-color: #f2f2f2;
     border: 0;
+    text-indent: 10px;
   }
 `;
 
@@ -71,6 +76,9 @@ export const UploadInfo = styled.div`
     resize: none;
     background-color: #f2f2f2;
     border: 0;
+    text-indent: 10px;
+    font-size: 14px;
+    /* margin-top: 2px; */
   }
 `;
 export const UploadBottom = styled.div`
@@ -83,12 +91,15 @@ export const UploadTag = styled.div`
   b {
     font-size: 14px;
   }
-  select {
+  /* select {
     width: 393px;
     height: 44px;
     background-color: #f2f2f2;
     border: 0;
     margin-right: 20px;
+  } */
+  .open {
+    width: 393px;
   }
 `;
 export const UploadLo = styled.div`
