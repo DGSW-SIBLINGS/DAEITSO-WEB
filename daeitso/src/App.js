@@ -5,6 +5,7 @@ import Startpage from "./page/Startpage/Startpage";
 import Header from "./components/Header/Header";
 import Main from "./page/Mainpage/Mainpage";
 import Uploadpage from "./page/Uploadpage/Uploadpage";
+import Postpage from "./page/Postpage/Postpage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Startpage />} />
         <Route path="/main" element={<Main />} />
         <Route path="/upload" element={<Uploadpage />} />
+        <Route path="/post" element={<Postpage />} />
       </Routes>
     </BrowserRouter>
   );
