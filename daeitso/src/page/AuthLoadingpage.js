@@ -17,6 +17,7 @@ const AuthLoadingpage = () => {
       });
       localStorage.setItem(ACCESS_KEY, data.data.accessToken);
       localStorage.setItem(REFRESH_KEY, data.data.refreshToken);
+      navigate();
     } catch (error) {}
   };
 };
