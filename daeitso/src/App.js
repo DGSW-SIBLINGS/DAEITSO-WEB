@@ -5,7 +5,9 @@ import Startpage from "./page/Startpage/Startpage";
 import Header from "./components/Header/Header";
 import Main from "./page/Mainpage/Mainpage";
 import Uploadpage from "./page/Uploadpage/Uploadpage";
+
 import Postpage from "./page/Postpage/Postpage";
+import AuthLoadingPage from "./page/AuthLoadingpage";
 
 function App() {
   return (
