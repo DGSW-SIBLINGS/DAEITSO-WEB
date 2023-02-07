@@ -24,7 +24,7 @@ export default function StartLogin() {
             <S.StartRight>
               <img className="Login-logo" alt="" src={logo} />
               <b>나눔으로 이어주는 연결고리</b>
-              <text>
+              <p>
                 대구소프트웨어마이스터고 신입생 여러분과 동급생, 선배님들을
                 환영합니다.
                 <br />
@@ -32,7 +32,7 @@ export default function StartLogin() {
                 있도록 도와주는 플랫폼입니다.
                 <br />
                 선배들의 물건, 능력을 물려받고, 더 멋있는 개발자가 되어보세요.
-              </text>
+              </p>
               <AuthBt />
             </S.StartRight>
           </S.StartRightBox>
