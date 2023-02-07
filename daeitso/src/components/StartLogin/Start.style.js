@@ -38,11 +38,9 @@ export const StartImgBox = styled.div`
   .Login-img {
     width: 500px;
     margin-left: -50px;
-    /* margin-top: 40px; */
   }
 
   .Login-left-logo {
-    /* z-index: 20; */
     width: 75px;
     margin-left: 30px;
     margin-top: 40px;
@@ -58,15 +56,10 @@ export const StartRight = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* align-items: center; */
-  /* align-items: center; */
   width: 700px;
   height: 600px;
   background-color: white;
-  /* margin-left: -100px; */
   .Login-logo {
-    /* display: flex;
-    justify-content: flex-start; */
     width: 80px;
     margin-left: 101px;
     margin-bottom: 5px;
@@ -76,7 +69,6 @@ export const StartRight = styled.div`
     font-size: 22px;
     margin-left: 100px;
     margin-bottom: 10px;
-    /* color: #; */
   }
 
   text {
