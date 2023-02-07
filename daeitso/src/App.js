@@ -9,7 +9,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Startpage />} />
-        <Route path="/main" element={<Header />} />
         <Route path="/upload" element={<Uploadpage />} />
       </Routes>
     </BrowserRouter>
