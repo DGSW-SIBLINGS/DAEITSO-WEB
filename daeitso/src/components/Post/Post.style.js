@@ -16,19 +16,12 @@ export const InfoWrap = styled.div`
   font-family: pretendard;
 `;
 export const PostImgWrap = styled.div`
-<<<<<<< Updated upstream
   width: 1155px;
   height: 500px;
 
   display: flex;
   flex-direction: row;
 `;
-=======
-width:1155px;
-display: flex;
-flex-direction:row;
-`
->>>>>>> Stashed changes
 export const Right = styled.div`
   display: flex;
   flex-direction: column;
@@ -146,12 +139,6 @@ export const Banner = styled.img`
 `;
 
 export const MemoContent2 = styled.div`
-<<<<<<< Updated upstream
-  width: 1155px;
-  height: 400px;
-  background-color: #f2f3fd;
-`;
-=======
 
 width:1155px;
 background-color: #F2F3FD;
@@ -159,7 +146,6 @@ display: flex;
 align-items:center;
 flex-direction: column;
 `
->>>>>>> Stashed changes
 
 export const Message_White = styled.div`
   background-color: white;
