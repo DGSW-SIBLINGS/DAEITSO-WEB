@@ -3,15 +3,25 @@ import * as P from "./Post.style";
 import like from '../../assets/img/like.svg';
 import clock from '../../assets/img/clock.svg';
 import banner from '../../assets/img/fixedbanner.svg';
+import Comment from './Post_comment';
 function Post(){
     const [comment,setComment] = useState("");
     const handleComment = (e) => {
         setComment(e.target.value);
         console.log(comment);
       };
-    const onComment = (()=>{
-        
-    })
+    const onComment = async ({}) =>{
+        try{
+            const data = {
+                postId: 0,
+                content: comment,
+              };
+        console.log(data);
+        const res = await customAxios.post("/post", data);
+            }catch (e) {
+                console.log(e);
+              }
+    };
     return(
         <>
         <P.PostWrap>
@@ -71,10 +81,11 @@ function Post(){
                     </P.Comment>
                 </P.line>
                 <P.MemoContent2>
-                    <P.Message_White width={'300px'}>안녕하세요 구매가능한가요?</P.Message_White>
+                    <Comment></Comment>
+                    {/* <P.Message_White width={'300px'}>안녕하세요 구매가능한가요?</P.Message_White>
                     <P.Message_Blue width={'250px'}>넵 구매 가능합니다!</P.Message_Blue>
                     <P.Message_White width={'350px'}>오오 그럼 운동장에서 3시에 만날까요?</P.Message_White>
-                    <P.Message_Blue width={'100px'}>좋습니다!</P.Message_Blue>
+                    <P.Message_Blue width={'100px'}>좋습니다!</P.Message_Blue> */}
                 </P.MemoContent2>
         </P.PostWrap>
 
