@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as P from "./Post.style";
 import like from "../../assets/img/like.svg";
 import clock from "../../assets/img/clock.svg";
 import banner from "../../assets/img/fixedbanner.svg";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import { customAxios } from "../../lib/axios/customAxios";
+import { postIdAtom } from "../../recoil/getAtom";
+import { useRecoilState } from "recoil";
 function Post() {
+  const [post, setPost] = useState();
+  const [postId, setPostId] = useRecoilState(postIdAtom);
+  //   const { postId } = useParams;
+
+  //   useEffect(() => {
+  //     request();
+  //   }, [postId]);
+
+  const location = useLocation();
+
+  const request = async () => {
+    try {
+      const { data } = await customAxios.get(`post/${location.state}`);
+      setPost(data.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <>
       <P.PostWrap>
