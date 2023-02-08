@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import React, { useEffect } from "react";
 import * as P from "./Post.style";
 import like from "../../assets/img/like.svg";
 import clock from "../../assets/img/clock.svg";
@@ -8,6 +7,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { customAxios } from "../../lib/axios/customAxios";
 import { postIdAtom } from "../../recoil/getAtom";
 import { useRecoilState } from "recoil";
+import Comment from './Post_comment';
 function Post() {
   const [post, setPost] = useState();
   const [postId, setPostId] = useRecoilState(postIdAtom);
@@ -17,12 +17,31 @@ function Post() {
   //     request();
   //   }, [postId]);
 
-  const location = useLocation();
+  const [comment,setComment] = useState("");
+  const handleComment = (e) => {
+      setComment(e.target.value);
+      console.log(comment);
+    };
 
+  const location = useLocation();
+  const onComment = async ({}) =>{
+    try{
+        const data = {
+            postId: location.state,
+            content: comment,
+          };
+    console.log(data);
+    const res = await customAxios.post(`/comment`, data);
+    console.log(res);
+        }catch (e) {
+            console.log(e);
+          }
+};
   const request = async () => {
     try {
       const { data } = await customAxios.get(`post/${location.state}`);
       setPost(data.data);
+      console.log(data);
     } catch (e) {
       console.log(e);
     }
@@ -84,16 +103,13 @@ function Post() {
           <P.Row>
             <P.Memo>상품문의</P.Memo>
           </P.Row>
+          <P.Comment>
+                 <P.CommentInput value={comment} onChange={(e)=>handleComment(e)}></P.CommentInput>
+                <P.SendButton onClick={onComment}>문의하기</P.SendButton>
+                    </P.Comment>
         </P.line>
         <P.MemoContent2>
-          <P.Message_White width={"300px"}>
-            안녕하세요 구매가능한가요?
-          </P.Message_White>
-          <P.Message_Blue width={"250px"}>넵 구매 가능합니다!</P.Message_Blue>
-          <P.Message_White width={"350px"}>
-            오오 그럼 운동장에서 3시에 만날까요?
-          </P.Message_White>
-          <P.Message_Blue width={"100px"}>좋습니다!</P.Message_Blue>
+            <Comment></Comment>
         </P.MemoContent2>
       </P.PostWrap>
     </>

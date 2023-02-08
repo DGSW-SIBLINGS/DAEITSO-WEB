@@ -142,6 +142,8 @@ export const MemoContent2 = styled.div`
 width:1155px;
 height:400px;
 background-color: #F2F3FD;
+display: flex;
+justify-content:center;
 `
 
 export const Message_White = styled.div`
@@ -190,6 +192,7 @@ height:50px;
 background-color: #707DFF;
 color:white;
 border: none;
+font-family: pretendard;
 &:active{
 background-color: #707dcc;
 transition: 0.5s;
