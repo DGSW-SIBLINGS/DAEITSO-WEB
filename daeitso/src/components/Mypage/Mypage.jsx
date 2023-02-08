@@ -11,15 +11,18 @@ function Mypage() {
   const { handleChangeFile } = useMyfile();
   const [data, setData] = useState([
     {
-      title: "대소고 후리스 나눔합니다",
-      imgUrls:
-        "https://mentomen.s3.ap-northeast-2.amazonaws.com/9e91067b-40dd-484f-a4ee-b0f06cce3afa.png",
-      category: "옷",
-      content:
-        "해커톤 옷으로 받았는데 사이즈를 잘못시켜 못입게되어 나눔합니다 ",
-      price: 0,
-      freeShare: "FREE",
-      place: "재덕정",
+      title: "혼공자 책 판매합니다",
+      imgUrls: [
+        {
+          imgUrl:
+          "https://mentomen.s3.ap-northeast-2.amazonaws.com/adf4a6b7-8882-4d2a-9ac3-321feaf3817a.jpg",
+        },
+      ],
+      category: "도서",
+      content: "집에 혼공자 책이 하나 더 있어서 판매합니다 새책 입니당",
+      price: 3000,
+      freeShare: "SALE",
+      place: "도서관",
     },
     {
       title: "혼공자 책 판매합니다",

@@ -10,24 +10,49 @@ import { postIdAtom } from "../../recoil/getAtom";
 import { useRecoilState } from "recoil";
 import { LOCATION } from "../../constants/locationlist/LOCATION";
 import { TAGLIST } from "../../constants/taglist/TAGLIST";
+import Comment from './Post_comment';
 function Post() {
   const [post, setPost] = useState();
-  //   const [postId, setPostId] = useRecoilState(postIdAtom);
+  const [postId, setPostId] = useRecoilState(postIdAtom);
 
   const location = useLocation();
+  useEffect(() => {
+    request();
+  }, [postId]);
 
   useEffect(() => {
     request();
   }, []);
-
-  const request = async () => {
-    try {
-      const { data } = await customAxios.get(`post/${location.state}`);
-      setPost(data.data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+  const [comment,setComment] = useState("");
+  const handleComment = (e) => {
+      setComment(e.target.value);
+      console.log(comment);
+    };
+  const onComment = async ({}) =>{
+    try{
+        const data = {
+            postId: location.state,
+            content: comment,
+          };
+    console.log(data);
+    const res = await customAxios.post(`/comment`, data);
+    console.log(res);
+        }catch (e) {
+            console.log(e);
+          }
+          finally {
+            request()
+          }
+};
+const request = async () => {
+  try {
+    const { data } = await customAxios.get(`post/${location.state}`);
+    setPost(data.data);
+    console.log(data.data);
+  } catch (e) {
+    console.log(e);
+  }
+};
 
   function getPlaceWithKorean() {
     return LOCATION.find((e) => e.payload === post.place).name;
@@ -101,16 +126,16 @@ function Post() {
           <P.Row>
             <P.Memo>상품문의</P.Memo>
           </P.Row>
+          <P.Comment>
+                 <P.CommentInput value={comment} onChange={(e)=>handleComment(e)}></P.CommentInput>
+                <P.SendButton onClick={onComment}>문의하기</P.SendButton>
+                    </P.Comment>
         </P.line>
         <P.MemoContent2>
-          <P.Message_White width={"300px"}>
-            안녕하세요 구매가능한가요?
-          </P.Message_White>
-          <P.Message_Blue width={"250px"}>넵 구매 가능합니다!</P.Message_Blue>
-          <P.Message_White width={"350px"}>
-            오오 그럼 운동장에서 3시에 만날까요?
-          </P.Message_White>
-          <P.Message_Blue width={"100px"}>좋습니다!</P.Message_Blue>
+            {post.comments.map((a,i)=>
+                <Comment post={a} key={i}></Comment>
+                )
+            }
         </P.MemoContent2>
       </P.PostWrap>
     )
