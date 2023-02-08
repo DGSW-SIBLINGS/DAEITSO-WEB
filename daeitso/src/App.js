@@ -18,7 +18,7 @@ function App() {
         <Route path="/callback" element={<AuthLoadingPage />} />
         <Route path="/main" element={<Main />} />
         <Route path="/upload" element={<Uploadpage />} />
-        <Route path="/post" element={<Postpage />} />
+        <Route path="/post/:postId" element={<Postpage />} />
         <Route path="/mypage" element={<Mypage />} />
       </Routes>
     </BrowserRouter>
