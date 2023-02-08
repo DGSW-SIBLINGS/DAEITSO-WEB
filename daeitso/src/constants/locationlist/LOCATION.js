@@ -5,3 +5,4 @@ export const LOCATION = [
   { name: "도서관", payload: "LIBRARY" },
   { name: "야외음악당", payload: "OUTDOORCONCERTHALL" },
 ];
+
