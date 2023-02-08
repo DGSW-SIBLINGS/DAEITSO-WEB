@@ -96,7 +96,7 @@ function Post() {
         <P.line>
           <P.Row>
             <P.Memo>상품설명</P.Memo>
-            <P.InfoWrap2>거래위치 : 운동장 | 카테고리 : 전자기기</P.InfoWrap2>
+            <P.InfoWrap2>거래위치 : 운동장 | 카테고리 :  전자기기</P.InfoWrap2>
           </P.Row>
         </P.line>
         <P.MemoContent></P.MemoContent>
