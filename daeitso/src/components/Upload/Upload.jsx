@@ -54,12 +54,13 @@ export default function Upload() {
   };
 
   useEffect(() => {
-    console.log(tag);
-  }, [tag]);
-
-  useEffect(() => {
-    console.log(locatag);
-  }, [locatag]);
+    console.log("locatag", locatag);
+    console.log("tag", tag);
+    console.log("name", name);
+    console.log("prices", prices);
+    console.log("free", free);
+    console.log("info", info);
+  }, [locatag, tag]);
   // const
   return (
     <U.UploadBox>
@@ -99,7 +100,7 @@ export default function Upload() {
               ? LOCATION.map((item) => (
                   <button
                     className="lacatagbt"
-                    onClick={() => setLocatag(item.name)}
+                    onClick={() => setLocatag(item.payload)}
                   >
                     {item.name}
                   </button>
@@ -114,7 +115,7 @@ export default function Upload() {
 
             {tagPopup
               ? TAGLIST.map((item) => (
-                  <button className="t" onClick={() => setTag(item.name)}>
+                  <button className="t" onClick={() => setTag(item.payload)}>
                     {item.name}
                   </button>
                 ))

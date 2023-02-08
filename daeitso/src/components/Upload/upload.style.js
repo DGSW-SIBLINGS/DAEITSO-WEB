@@ -13,9 +13,6 @@ export const UploadTop = styled.div`
   margin-left: -35px;
   margin-bottom: 25px;
   font-family: pretendard;
-  /* button {
-    width: 200px;
-  } */
 `;
 export const UploadName = styled.div`
   display: flex;
@@ -70,20 +67,19 @@ export const UploadPrice = styled.div`
     background-color: #f2f2f2;
     border: 1px solid black;
     border-radius: 100px;
-    /* margin-right: 10px; */
   }
 `;
 
 export const UploadPriceBt = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 19px;
+  margin-top: 15px;
   margin-left: 15px;
   font-family: pretendard;
   button {
     display: flex;
     width: 80px;
-    height: 42px;
+    height: 44px;
     justify-content: center;
     align-items: center;
     margin-top: 2px;
@@ -113,7 +109,6 @@ export const UploadInfo = styled.div`
     font-family: pretendard;
     text-indent: 10px;
     font-size: 14px;
-    /* margin-top: 2px; */
   }
 `;
 export const UploadBottom = styled.div`
@@ -124,36 +119,26 @@ export const UploadBottom = styled.div`
 export const UploadTag = styled.div`
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
 
   b {
     font-size: 14px;
     font-family: pretendard;
   }
-  /* select {
-    width: 393px;
-    height: 44px;
-    background-color: #f2f2f2;
-    border: 0;
-    margin-right: 20px;
-    font-family: pretendard;
-  } */
+
   .open {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* margin-left: 50px; */
     width: 390px;
     height: 44px;
     border: 0;
-    /* margin-right: 15px; */
   }
 
   .lacatagbt {
     border: 0;
     height: 22px;
     background-color: #f8f8f8;
-    /* border-left: 0.5px solid black;/ */
-    /* border-bottom-left-radius: 10px; */
   }
   .lacatagbt:hover {
     background-color: #3d8af5;
@@ -178,7 +163,6 @@ export const UploadLo = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* margin-left: 50px; */
     width: 393px;
     height: 44px;
     border: 0;
@@ -188,8 +172,6 @@ export const UploadLo = styled.div`
     border: 0;
     height: 22px;
     background-color: #f8f8f8;
-    /* border-left: 0.5px solid black;/ */
-    /* border-bottom-left-radius: 10px; */
   }
   .t:hover {
     background-color: #3d8af5;
@@ -197,4 +179,5 @@ export const UploadLo = styled.div`
 `;
 
 export const UploadBtBox = styled.div`
-font-family: pretendard;`;
+  font-family: pretendard;
+`;

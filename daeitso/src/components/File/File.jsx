@@ -26,7 +26,7 @@ export default function File({}) {
     try {
       const { data } = await customAxios.post("/file", formData);
       const arr = [];
-
+      console.log("ㅎㅇ");
       data.data.forEach((value) => {
         arr.push(value);
       });

@@ -1,7 +1,7 @@
 export const LOCATION = [
-  { name: "운동장" },
-  { name: "강당" },
-  { name: "재덕정" },
-  { name: "도서관" },
-  { name: "야외음악당" },
+  { name: "운동장", payload: "PLAYGROUND" },
+  { name: "강당", payload: "AUDITORIUM" },
+  { name: "재덕정", payload: "JAEDUCK" },
+  { name: "도서관", payload: "LIBRARY" },
+  { name: "야외음악당", payload: "OUTDOORCONCERTHALL" },
 ];
