@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+// import React, { useEffect } from "react";
 import * as P from "./Post.style";
 import like from "../../assets/img/like.svg";
 import clock from "../../assets/img/clock.svg";
@@ -8,16 +8,16 @@ import { useLocation, useParams } from "react-router-dom";
 import { customAxios } from "../../lib/axios/customAxios";
 import { postIdAtom } from "../../recoil/getAtom";
 import { useRecoilState } from "recoil";
+import { LOCATION } from "../../constants/locationlist/LOCATION";
 function Post() {
   const [post, setPost] = useState();
-  const [postId, setPostId] = useRecoilState(postIdAtom);
-  //   const { postId } = useParams;
-
-  //   useEffect(() => {
-  //     request();
-  //   }, [postId]);
+  //   const [postId, setPostId] = useRecoilState(postIdAtom);
 
   const location = useLocation();
+
+  useEffect(() => {
+    request();
+  }, []);
 
   const request = async () => {
     try {
@@ -28,8 +28,12 @@ function Post() {
     }
   };
 
+  function getPlaceWithKorean() {
+    return LOCATION.find((e) => e.payload === post.place).name;
+  }
+
   return (
-    <>
+    post && (
       <P.PostWrap>
         <P.InfoWrap>
           카테고리 : 전자기기 | 나눔여부
@@ -37,16 +41,17 @@ function Post() {
         </P.InfoWrap>
         <P.PostImgWrap>
           <img
-            src={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKhqpzZUj7Gjc0AmulXvFbmbBj0fu6YxbqQ&usqp=CAU"
-            }
+            src={post.imgUrls && post.imgUrls[0]}
             alt="none"
             style={{ width: 500, height: 500 }}
           ></img>
           <P.Right>
-            <P.Title>키보드 반쪽 나눔해요</P.Title>
+            <P.Title>{post.title}</P.Title>
             <P.PriceWrap>
-              <P.Price>무료나눔</P.Price>
+              <P.Price>
+                {(post.freeShare === "SALE" && post.price) ||
+                  (post.freeShare === "FREE" && 0)}
+              </P.Price>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <P.Tag>나눔</P.Tag>
                 <P.Tag>페이</P.Tag>
@@ -61,7 +66,7 @@ function Post() {
                 <img src={clock}></img>
                 2:51
               </P.Subinfo>
-              <P.Subinfo>거래 위치: 운동장</P.Subinfo>
+              <P.Subinfo>거래 위치: {getPlaceWithKorean()}</P.Subinfo>
             </P.Row>
             <div style={{ marginTop: 200 }}></div>
             <P.Row>
@@ -96,7 +101,7 @@ function Post() {
           <P.Message_Blue width={"100px"}>좋습니다!</P.Message_Blue>
         </P.MemoContent2>
       </P.PostWrap>
-    </>
+    )
   );
 }
 
