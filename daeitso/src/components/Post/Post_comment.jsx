@@ -7,12 +7,16 @@ width:1100px;
 height:120px;
 border-top: 1px solid black;
 border-bottom: 1px solid black;
+
+display:flex;
+flex-direction: column;
 `
 const CommentInfo = styled.div`
 display: flex;
 flex-direction: row;
 width:300px;
 padding:15px;
+padding-bottom:5px;
 font-family: pretendard;
 `
 const CommentImg = styled.img`
@@ -50,16 +54,17 @@ const CommentContent = styled.div`
     margin-right:10px;
     margin-left:25px;
 `
-function Post_comment(){
+function Post_comment(props){
+    console.log(props.post.userName)
     return(
         <>
         <CommentWrap>
             <CommentInfo>
                 <CommentImg alt='none' src={banner}></CommentImg>
-                <CommentName>김예림</CommentName>
+                <CommentName>{props.post.userName}</CommentName>
                 <CommentDate>2023.02.06</CommentDate>
             </CommentInfo>
-            <CommentContent>혹시 판매 되었나요??</CommentContent>
+            <CommentContent>{props.post.content}</CommentContent>
         </CommentWrap>
         </>
     )
