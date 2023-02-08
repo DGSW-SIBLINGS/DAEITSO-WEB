@@ -82,9 +82,13 @@ function Main() {
     <M.Subtitle>도서 카테고리 상품</M.Subtitle>
     <M.ComponentWrap>
     {/* {
-        data.map((a,i)=>{
-            return <Component post={a} key={i}></Component>
-        })
+      data.map((a,i)=>{
+        return (
+          <SplideSlide key={i}>
+            <Component post={a} key={i}></Component>
+          </SplideSlide>
+        );
+      })
     } */}
     
     </M.ComponentWrap>

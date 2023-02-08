@@ -1,9 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import * as P from "./Post.style";
 import like from '../../assets/img/like.svg';
 import clock from '../../assets/img/clock.svg';
 import banner from '../../assets/img/fixedbanner.svg';
 function Post(){
+    const [comment,setComment] = useState("");
+    const handleComment = (e) => {
+        setComment(e.target.value);
+        console.log(comment);
+      };
+    const onComment = (()=>{
+        
+    })
     return(
         <>
         <P.PostWrap>
@@ -57,6 +65,10 @@ function Post(){
                     <P.Row>
                     <P.Memo>상품문의</P.Memo>
                     </P.Row>
+                    <P.Comment>
+                        <P.CommentInput value={comment} onChange={(e)=>handleComment(e)}></P.CommentInput>
+                        <P.SendButton onClick={onComment}>문의하기</P.SendButton>
+                    </P.Comment>
                 </P.line>
                 <P.MemoContent2>
                     <P.Message_White width={'300px'}>안녕하세요 구매가능한가요?</P.Message_White>
