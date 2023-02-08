@@ -8,34 +8,35 @@ import { customAxios } from "../../lib/axios/customAxios";
 import { postIdAtom } from "../../recoil/getAtom";
 import { useRecoilState } from "recoil";
 import { LOCATION } from "../../constants/locationlist/LOCATION";
-import Comment from './Post_comment';
+import Comment from "./Post_comment";
+import { TAGLIST } from "../../constants/taglist/TAGLIST";
 function Post() {
   const [post, setPost] = useState();
 
-  const [comment,setComment] = useState("");
+  const [comment, setComment] = useState("");
   const handleComment = (e) => {
-      setComment(e.target.value);
-      console.log(comment);
-    };
+    setComment(e.target.value);
+    console.log(comment);
+  };
 
   useEffect(() => {
     request();
   }, []);
 
   const location = useLocation();
-  const onComment = async ({}) =>{
-    try{
-        const data = {
-            postId: location.state,
-            content: comment,
-          };
-    console.log(data);
-    const res = await customAxios.post(`/comment`, data);
-    console.log(res);
-        }catch (e) {
-            console.log(e);
-          }
-};
+  const onComment = async ({}) => {
+    try {
+      const data = {
+        postId: location.state,
+        content: comment,
+      };
+      console.log(data);
+      const res = await customAxios.post(`/comment`, data);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const request = async () => {
     try {
@@ -49,6 +50,10 @@ function Post() {
 
   function getPlaceWithKorean() {
     return LOCATION.find((e) => e.payload === post.place).name;
+  }
+
+  function getCategory() {
+    return TAGLIST.find((e) => e.payload === post.category).name;
   }
 
   return (
@@ -69,7 +74,7 @@ function Post() {
             <P.PriceWrap>
               <P.Price>
                 {(post.freeShare === "SALE" && post.price) ||
-                  (post.freeShare === "FREE" && 0)}
+                  (post.freeShare === "FREE" && "무료나눔")}
               </P.Price>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <P.Tag>나눔</P.Tag>
@@ -99,9 +104,16 @@ function Post() {
         <P.line>
           <P.Row>
             <P.Memo>상품설명</P.Memo>
-            <P.InfoWrap2>거래위치 : 운동장 | 카테고리 : 전자기기</P.InfoWrap2>
+            <P.InfoWrap2>
+              거래위치 : {getPlaceWithKorean()} | 카테고리 :{getCategory()}
+            </P.InfoWrap2>
           </P.Row>
+
+          <P.Content>
+            <p>{post.content}</p>
+          </P.Content>
         </P.line>
+
         <P.MemoContent></P.MemoContent>
         <P.Banner src={banner}></P.Banner>
         <P.line>
@@ -109,17 +121,19 @@ function Post() {
             <P.Memo>상품문의</P.Memo>
           </P.Row>
           <P.Comment>
-                 <P.CommentInput value={comment} onChange={(e)=>handleComment(e)}></P.CommentInput>
-                <P.SendButton onClick={onComment}>문의하기</P.SendButton>
-                    </P.Comment>
+            <P.CommentInput
+              value={comment}
+              onChange={(e) => handleComment(e)}
+            ></P.CommentInput>
+            <P.SendButton onClick={onComment}>문의하기</P.SendButton>
+          </P.Comment>
         </P.line>
         <P.MemoContent2>
-            <Comment></Comment>
+          <Comment></Comment>
         </P.MemoContent2>
       </P.PostWrap>
     )
   );
 }
-
 
 export default Post;
