@@ -25,21 +25,25 @@ export default function UploadBt() {
   const upload = async ({}) => {
     try {
       const data = {
-        imgUrls: fileUrl,
+        imgUrls: fileUrl[0].imgUrl,
         category: tag,
         title: name,
         content: info,
         price: prices,
-        freeShare: free,
+        freeShare: free === 0 ? "FREE" : "SALE",
         place: locatag,
       };
 
+      console.log(data);
+
       const res = await customAxios.post("/post", data);
+      console.log(res);
       navigate("/main");
     } catch (e) {
       console.log(e);
     }
   };
+
   return (
     <B.UploadBtBox>
       <B.UploadBtD>
