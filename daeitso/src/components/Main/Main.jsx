@@ -11,17 +11,24 @@ import Component from "../../components/Main/Main_Component";
 import { customAxios } from "../../lib/axios/customAxios";
 import { postIdAtom } from "../../recoil/getAtom";
 import { useRecoilState } from "recoil";
-
+import { useNavigate } from "react-router-dom";
 const images = [banner, banner2, banner3];
-
+// import { useParams } from "react-router-dom";
 function Main() {
-  const [data, setData] = useState([{}]);
   const [postId, setPostId] = useRecoilState(postIdAtom);
+  // const { postId } = useParams();
+  const navigate = useNavigate();
+  const onClick = (id) => {
+    navigate(`/post/${id}`, { state: id });
+  };
+  const [data, setData] = useState([{}]);
+
   const request = async () => {
     try {
       const { data } = await customAxios.get("/post");
       setData(data.data);
       setPostId(data.postId);
+      console.log(postId);
     } catch (error) {
       console.log(error);
     }
@@ -69,7 +76,7 @@ function Main() {
           >
             {data.map((a, i) => {
               return (
-                <SplideSlide key={i}>
+                <SplideSlide key={i} onClick={() => onClick(a.postId)}>
                   <Component post={a} key={i}></Component>
                 </SplideSlide>
               );
