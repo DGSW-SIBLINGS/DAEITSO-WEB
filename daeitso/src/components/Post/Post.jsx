@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import React, { useEffect } from "react";
 import * as P from "./Post.style";
 import like from "../../assets/img/like.svg";
 import clock from "../../assets/img/clock.svg";
