@@ -142,7 +142,6 @@ export const MemoContent2 = styled.div`
   width: 1155px;
   height: 400px;
   background-color: #f2f3fd;
-  /* margin-top: -50px; */
 `;
 
 export const Message_White = styled.div`
@@ -191,13 +190,4 @@ export const SendButton = styled.button`
     background-color: #707dcc;
     transition: 0.5s;
   }
-`;
-
-export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100px;
-  /* margin-top: 50px; */
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 `;
