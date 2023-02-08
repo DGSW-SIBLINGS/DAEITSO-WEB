@@ -18,7 +18,6 @@ export const InfoWrap = styled.div`
 export const PostImgWrap = styled.div`
   width: 1155px;
   height: 500px;
-
   display: flex;
   flex-direction: row;
 `;
@@ -53,13 +52,11 @@ export const Tag = styled.div`
   width: 70px;
   height: 30px;
   background-color: #5e78ff;
-
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
   margin-right: 5px;
-
   color: white;
   font-family: Pretendard;
   border-radius: 5px;
@@ -73,7 +70,6 @@ export const Row = styled.div`
 export const Subinfo = styled.div`
   display: flex;
   flex-direction: row;
-
   color: #9e9e9e;
   font-family: Pretendard;
   align-items: center;
@@ -82,18 +78,15 @@ export const Subinfo = styled.div`
 export const Button = styled.div`
   width: 150px;
   height: 50px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: white;
   font-family: pretendard;
   font-weight: 600;
   font-size: 1.2rem;
   border-radius: 5px;
   background-color: ${(props) => props.color};
-
   margin: 10px;
 `;
 export const Memo = styled.div`
@@ -139,13 +132,10 @@ export const Banner = styled.img`
 `;
 
 export const MemoContent2 = styled.div`
-
-width:1155px;
-background-color: #F2F3FD;
-display: flex;
-align-items:center;
-flex-direction: column;
-`
+  width: 1155px;
+  height: 400px;
+  background-color: #f2f3fd;
+`;
 
 export const Message_White = styled.div`
   background-color: white;
@@ -153,7 +143,6 @@ export const Message_White = styled.div`
   color: black;
   font-family: pretendard;
   font-weight: 500;
-
   width: ${(props) => props.width};
   padding: 10px;
   margin: 10px;
@@ -165,7 +154,6 @@ export const Message_Blue = styled.div`
   color: #5e78ff;
   font-family: pretendard;
   font-weight: 500;
-
   width: ${(props) => props.width};
   padding: 10px;
   margin: 10px;
@@ -194,3 +182,5 @@ export const SendButton = styled.button`
     transition: 0.5s;
   }
 `;
+
+export const Content = styled.div``;
