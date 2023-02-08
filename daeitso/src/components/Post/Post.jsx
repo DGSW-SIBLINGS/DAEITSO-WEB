@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import * as P from "./Post.style";
 import like from "../../assets/img/like.svg";
 import clock from "../../assets/img/clock.svg";
@@ -75,6 +75,7 @@ function Post() {
       </P.PostWrap>
     </>
   );
+
 }
 
 export default Post;

@@ -82,6 +82,7 @@ function Main() {
         data.map((a,i)=>{
             return <Component post={a} key={i}></Component>
         })
+
     } */}
         </M.ComponentWrap>
       </M.MainWrap>
