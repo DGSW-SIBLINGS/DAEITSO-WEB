@@ -88,9 +88,7 @@ function Post(){
                     <P.Message_Blue width={'100px'}>좋습니다!</P.Message_Blue> */}
                 </P.MemoContent2>
         </P.PostWrap>
-
         </>
-    )
-}
+)};
 
 export default Post;
